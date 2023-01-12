@@ -1,0 +1,8 @@
+site_name: Veille technologique
+theme:
+  name: material
+repo_name: veille
+repo_url: https://github.com/arthuRHD/veille
+plugins:
+  - search
+copyright: Arthur RICHARD @2023
