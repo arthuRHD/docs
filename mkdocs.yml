@@ -2,8 +2,10 @@ site_name: Veille technologique
 theme:
   language: fr
   name: material
-repo_name: veille
-repo_url: https://github.com/arthuRHD/veille
+repo_name: veille.github.io
+repo_url: https://github.com/arthuRHD/veille.github.io
 plugins:
   - search
+  - git-revision-date-localized:
+      enable_creation_date: true
 copyright: Arthur RICHARD @2023
