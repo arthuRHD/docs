@@ -1,5 +1,6 @@
 site_name: Veille technologique
 theme:
+  language: fr
   name: material
 repo_name: veille
 repo_url: https://github.com/arthuRHD/veille
