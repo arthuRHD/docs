@@ -2,8 +2,8 @@ site_name: Veille technologique
 theme:
   language: fr
   name: material
-repo_name: veille.github.io
-repo_url: https://github.com/arthuRHD/veille.github.io
+repo_name: docs
+repo_url: https://github.com/arthuRHD/docs
 plugins:
   - search
   - git-revision-date-localized:
