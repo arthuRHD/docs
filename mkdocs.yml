@@ -7,7 +7,7 @@ theme:
 repo_name: docs
 repo_url: https://github.com/arthuRHD/docs
 plugins:
-  - search
+  - search:
       indexing: 'full'
   - git-revision-date-localized:
       enable_creation_date: true
