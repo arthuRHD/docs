@@ -1,4 +1,6 @@
 site_name: Veille technologique
+site_url: https://docs.arthurrichard.fr
+site_author: Arthur RICHARD
 theme:
   language: fr
   name: material
@@ -6,6 +8,7 @@ repo_name: docs
 repo_url: https://github.com/arthuRHD/docs
 plugins:
   - search
+      indexing: 'full'
   - git-revision-date-localized:
       enable_creation_date: true
 copyright: Arthur RICHARD @2023
