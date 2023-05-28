@@ -12,4 +12,4 @@ C'est accesible à tous dans l'intérêt que je puisse consulter le site depuis 
 
 Je vous invite à me faire des retours et de me corriger si mes documentations sont incorrectes.
 
-Vous pouvez me joindre par mail [ici.](mailto: arthur.richard2299@gmail.com)
+Vous pouvez me joindre par mail [ici](mailto: arthur.richard2299@gmail.com).
