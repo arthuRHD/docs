@@ -47,6 +47,10 @@ $ aws configure
 
 Si vous rencontrez des soucis de configuration et qui vous avez un besoin urgent d'utiliser le CLI, vous pouvez regarder le service [CloudShell](https://eu-west-3.console.aws.amazon.com/cloudshell/home?region=eu-west-3#) qui pré-configuré et possède même des langages de programmation installé.
 
+Si vous avez besoin d'informations plus poussés concernant le CLI d'AWS, je vous encourage à aller visiter la documentation décrivant chaque commande et sous-commande [ici](https://docs.aws.amazon.com/cli/latest/index.html).
+
+Il existe une autocomplétion possible dans votre terminal, la configuration est expliquée [ici](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html#cli-command-completion-linux).
+
 ### SDK
 
 TODO
