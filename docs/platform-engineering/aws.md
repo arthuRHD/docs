@@ -55,6 +55,10 @@ TODO
 
 TODO
 
+## IAM
+
+TODO
+
 ## S3
 
 S3 est un serveur de fichiers qui permet de stocker à distance des fichiers plats. On peut copier, déplacer et supprimer de manière bidirectionnel.
@@ -84,15 +88,25 @@ $ aws s3api delete-bucket --bucket arichard # (5)
 4. On supprime le fichier local téléchargé et le fichier distant.
 5. On supprime le S3 en lui fournissant le nom.
 
-## IAM
+## EC2
+
+### Créer une instance
+
+### Afficher les méta-données des instances
+
+### Modifier une instance déjà créée
+
+### Faire communiquer deux instances entre-elles
+
+### Nettoyer les ressources
+
+TODO
+
+## EBS
 
 TODO
 
 ## RDS
-
-TODO
-
-## EC2
 
 TODO
 
@@ -101,5 +115,21 @@ TODO
 TODO
 
 ## Lambda
+
+TODO
+
+## SQS & SNS
+
+TODO
+
+## CloudWatch
+
+TODO
+
+## API Gateway
+
+TODO
+
+## Kubernetes
 
 TODO
