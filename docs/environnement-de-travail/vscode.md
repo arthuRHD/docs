@@ -1,4 +1,4 @@
-# Visual Studio Code
+# Personnaliser VSCode
 
 Il est possible de facilement configurer l'environnement avec seulement un seul fichier.
 Ce fichier JSON doit avoir finir par l'extension `<my_workspace>.code-workspace` afin d'être reconnu par l'éditeur.

@@ -51,10 +51,6 @@ Si vous avez besoin d'informations plus poussés concernant le CLI d'AWS, je vou
 
 Il existe une autocomplétion possible dans votre terminal, la configuration est expliquée [ici](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html#cli-command-completion-linux).
 
-### SDK
-
-TODO
-
 ### Terraform
 
 TODO
@@ -120,6 +116,12 @@ TODO
 
 ## Lambda
 
+### Déployer une Lambda sous forme de conteneur Docker
+
+### Paramétrer les autorisations de la fonction
+
+### Nettoyer les ressources
+
 TODO
 
 ## SQS & SNS
@@ -128,9 +130,23 @@ TODO
 
 ## CloudWatch
 
+### Créer un groupe de log
+
+### Créer ses propres KPI
+
+### Créer des alarmes 
+
+### Mettre en place un workflow de monitoring
+
+### Nettoyer les ressources
+
 TODO
 
 ## API Gateway
+
+TODO"
+
+## ECR
 
 TODO
 
