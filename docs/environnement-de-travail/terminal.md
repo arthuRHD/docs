@@ -97,3 +97,5 @@ Vous pouvez la copier ou vous en inspirer pour créer la votre.
 Une fois modifié, il ne faut pas oublier de recharger l'interpréteur actuel avec `source ~/.zshrc`, ou de tout simplement
 redémarrer le terminal.
 
+Il est possible de créer des touches personnalisées sur le Moonlander ZSA. Il faut pour cela se rendre sur Oryx ou directement télécharger mes dotfiles qui contiennent le firmware du clavier qu'il ne reste plus qu'à flashé.
+
