@@ -56,7 +56,7 @@ export function App() {
 
 ### useEffect
 
-__useEffect__ effectue une tâche lorsqu'une valeur stockée dans un state est altérée. Si nous passons un tableau vide en paramètre, la tâche s'effectura à chaque rechargement du DOM si le composant s'y trouve.
+__useEffect__ effectue une tâche lorsqu'une valeur stockée dans un state est altérée. Si nous passons un tableau vide en paramètre, la tâche s'effectura une seule fois au chargement du DOM.
 
 ```typescript
 import React from 'react';
@@ -87,3 +87,13 @@ export function App() {
 }
 ```
 
+## Gestion des appels API
+
+C'est pratique de savoir comment créer des composants graphiques, mais que fait-on si nous devons récupérer de la données depuis un serveur ? il faut être en mesure de pouvoir organiser les appels en suivant les bonnes pratiques. Cela signifie:
+
+- Ne pas stocker de clés privées ou de clés API côté client pour la sécurité.
+- Eviter de dupliquer les appels dans chaque composant, il faut les centraliser dans un DAO.
+
+### Utilisation de Redux avec Thunk
+
+Utiliser Redux nous permet découpler l'UI de la données. On utilise Thunk pour ajouter un middleware qui nous permet d'abstraire les changements de state dûs à la réponse API (loading, error, etc).
