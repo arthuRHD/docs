@@ -39,7 +39,7 @@ export function App() {
 __useState__ permet de stocker une valeur mutable (par exemple, un input ou un fichier). Le DOM est rechargé à chaque fois que cette valeur stockée est modifiée.
 
 ```typescript
-import React from 'react';
+import { React, useState } from 'react';
 import { CustomComponent } from './CustomComponent.jsx';
 
 export function App() {
@@ -59,7 +59,7 @@ export function App() {
 __useEffect__ effectue une tâche lorsqu'une valeur stockée dans un state est altérée. Si nous passons un tableau vide en paramètre, la tâche s'effectura une seule fois au chargement du DOM.
 
 ```typescript
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import { CustomComponent } from './CustomComponent.jsx';
 
 export function App() {
@@ -97,3 +97,39 @@ C'est pratique de savoir comment créer des composants graphiques, mais que fait
 ### Utilisation de Redux avec Thunk
 
 Utiliser Redux nous permet découpler l'UI de la données. On utilise Thunk pour ajouter un middleware qui nous permet d'abstraire les changements de state dûs à la réponse API (loading, error, etc).
+
+### Éviter la duplication des appels lors de rafraichissement du DOM
+
+Lorsque le state est mis à jour, le DOM est rechargé et les appels API sont malheuresement réitérés. Pour cela, il faut utiliser le hook __useMemo__ qui permet de mettre en cache la réponse à cet appel.
+
+```typescript
+import { React, useState, useMemo, useEffect } from 'react';
+import { CustomComponent } from './CustomComponent.jsx';
+
+export function App() {
+
+  const [count, setCount] = useState<number>(0);
+  const [innerText, setInnerText] = useState<string>("");
+
+  const apiCall = (index: number): string async => {
+    let response = await fetch('https://jsonplaceholder.typicode.com/todos/' + index);
+    return reponse.json().title
+  } 
+
+  const cachedData = useMemo(() => apiCall(count), [count])
+
+  useEffect(() => console.log("App component initialized"), [])
+
+  useEffect(() => setInnerText(cachedData), [cachedData, setInnerText]);
+
+  const increment = () => setCount(count + 1)
+
+  return (
+      <div>
+          <CustomComponent text={innerText}/>
+
+          <button onClick={increment}>Click hear {count}</button>
+      </div>
+  );
+}
+```

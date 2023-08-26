@@ -4,6 +4,18 @@ AWS est une plateforme regroupant de nombreux services d'hébergement (CPU, Base
 
 [![Watch the video](https://img.youtube.com/vi/JIbIYCM48to/hqdefault.jpg)](https://youtu.be/JIbIYCM48to)
 
+## Avantages
+
+- Agilité, augmente l'agilité de l'entreprise
+- Modèle de paiement à l'utilisation, echange de l'argent contre du CPU
+- Facilite l'agrandissement d'une infrastructure IT d'une entreprise
+- Permet d'être atteignable depuis le monde entier en quelques minutes
+- Sécurité, à travers le modèle de responsabilité partagé
+- Résilience et disponible, performe comme promis par AWS  
+- Elasticité, permet d'ajouter ou de supprimer rapidement des ressources automatiquement
+
+![Shared responsability model](shared_responsibility.png) 
+
 ## Mode d'accès
 
 Chaque mode d'accès dépend de l'utilisation. 
@@ -90,6 +102,11 @@ $ aws s3api delete-bucket --bucket arichard # (5)
 
 ## EC2
 
+EC2 est un service de création de machine virtuelle en cloud. (Elastic Cloud Computing)
+
+Il est "élastique" car on peut moduler ses composants en fonction du besoin (CPU, RAM, Stockage, Réseau). Il existe des configurations par défaut
+que nous pouvons utiliser appelé AMI (Amazon Machine Image).
+
 ### Créer une instance
 
 ### Afficher les méta-données des instances
@@ -99,6 +116,25 @@ $ aws s3api delete-bucket --bucket arichard # (5)
 ### Faire communiquer deux instances entre-elles
 
 ### Nettoyer les ressources
+
+TODO
+
+## Scaling
+
+AWS propose deux manières du supporter la charge entrante. Il y a :
+
+- Auto scaling groups,
+- ELB (Elastic Load Balancer)
+
+### Auto scaling groups
+
+Un groupe échelonne horizontalement les ressources en fonction d'un critère donné (exemple: créer une nouvelle instance si le CPU dépasse 80% d'utilisation).
+Un groupe permet de définir un nombre minimum, désiré et maximum d'instances répliquées.
+
+### EJB
+
+Un EJB absorbe la charge la répartissant afin d'obtenir la plus faible latence. Il existe deux types de load balancer: applicatif et réseau.
+l'EJB applicatif sert à répartir le traffic sur plusieurs EC2 tandis que l'EJB Réseau absorbe en amont le traffic réseau.
 
 TODO
 
