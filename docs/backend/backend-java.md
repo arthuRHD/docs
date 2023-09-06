@@ -2,6 +2,8 @@
 
 ## Générer un projet Spring Boot avec Spring Initializer
 
+Se rendre sur [https://start.spring.io/](https://start.spring.io/).
+
 ## Créer une image Docker
 
 Pour créer une image Docker compatible avec une application Spring, il faut surchargé l'image principale de gradle pour pouvoir générer le livrable et ensuite le copié et utilisé l'image du JDK GraalVM pour le runtime.
