@@ -22,3 +22,7 @@ COPY --from=build /home/gradle/src/build/libs/*.jar spring-boot-application.jar
 
 ENTRYPOINT ["java", "-XX:+UnlockExperimentalVMOptions", "-Djava.security.egd=file:/dev/./urandom","-jar","spring-boot-application.jar"]
 ```
+
+## Déployer un backend en Spring Boot sur AWS
+
+WIP
