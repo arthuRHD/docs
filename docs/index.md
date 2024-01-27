@@ -6,11 +6,3 @@ des notes concernant une technologie ou un concept que je veux apprendre.
 Je vous invite à me faire des retours et de me corriger si mes documentations sont incorrectes.
 
 Vous pouvez me joindre par mail: <hello@arthurrichard.fr>
-
-## Backlog des technos à approfondir
-
-- Pandas (IO + Graphiques avancées) avec Python dans le cadre de la certification Google Data Analytics
-- Déployer un backend en Spring Boot sur AWS de plusieurs manières différentes
-- Plugger CloudWatch à un backend et scripter ça avec Terraform (ou OpenTF ??)
-- LLM avec Mojo et Python pour la certification CS50AI
-- Faire un front avec Svelte + SvelteKit
