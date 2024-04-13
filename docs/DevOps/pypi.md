@@ -1,4 +1,4 @@
-# PyPI
+# Créer et déployer un package python sur PyPI
 
 TODO
 
