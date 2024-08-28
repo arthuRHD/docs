@@ -6,4 +6,4 @@ Ce tableau permet de visualiser rapidement quelles sont les tâches qui mériten
 
 Aussi, être accompagné d'un PO ou du client permet d'éviter le biais dans la catégorisation et rester aligné avec les objectifs.
 
-![eisenhower](./eisenhower-matrix.md)
+![eisenhower](./eisenhower.jpg)
