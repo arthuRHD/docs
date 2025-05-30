@@ -40,6 +40,7 @@ nav:
       - PostgreSQL: data/postgres.md
       - Jointures SQL: data/sql-joints.md
   - Front:
+      - Chrome v8: front/chrome-v8.md
       - React: front/react.md
       - Svelte: front/svelte.md
       - HTMX: front/htmx.md
