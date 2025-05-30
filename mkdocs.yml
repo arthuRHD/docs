@@ -19,4 +19,37 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-copyright: Arthur RICHARD @2023
+copyright: Arthur RICHARD @2025
+nav:
+  - Accueil: index.md
+  - Backend:
+      - Go: backend/backend-golang.md
+      - Java: backend/backend-java.md
+  - DevOps:
+      - AWS: DevOps/aws.md
+      - Terraform: DevOps/terraform.md
+      - Helm: DevOps/helm.md
+      - Kubernetes: DevOps/kubejob.md
+      - Sécurité Kubernetes: DevOps/security-k8s.md
+      - KRR: DevOps/krr.md
+      - APM & ELK: DevOps/apm.md
+      - GitLab: DevOps/gitlab.md
+      - PyPI: DevOps/pypi.md
+      - Test de charge: DevOps/test-charge.md
+  - Data:
+      - PostgreSQL: data/postgres.md
+      - Jointures SQL: data/sql-joints.md
+  - Front:
+      - React: front/react.md
+      - Svelte: front/svelte.md
+      - HTMX: front/htmx.md
+      - Archi CSS: front/archi-css.md
+  - Environnement de travail:
+      - VSCode: environnement-de-travail/vscode.md
+      - TypeScript: environnement-de-travail/typescript.md
+      - Terminal: environnement-de-travail/terminal.md
+      - Chrome: environnement-de-travail/chrome.md
+      - Neovim: environnement-de-travail/nvim.md
+  - Techniques de travail:
+      - Matrice d'Eisenhower: techniques-de-travail/eisenhower-matrix.md
+      - Premiers principes: techniques-de-travail/first-principles-thinking.md
