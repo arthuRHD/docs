@@ -130,3 +130,41 @@ jobs:
 ```
 
 Automatiser les tests permet de garantir la performance à chaque modification ou déploiement.
+
+### Lancer des tests k6 avec `helm test` et récupérer les résultats
+
+Helm permet d’automatiser l’exécution de tests de charge k6 lors du déploiement d’un chart. Il suffit d’ajouter un pod de test dans le dossier `templates/tests/` de votre chart Helm :
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "k6-load-test"
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: k6
+      image: grafana/k6:latest
+      command: ["k6", "run", "/scripts/script.js"]
+      volumeMounts:
+        - name: k6-scripts
+          mountPath: /scripts
+  restartPolicy: Never
+  volumes:
+    - name: k6-scripts
+      configMap:
+        name: k6-scripts
+```
+
+- Placez votre script k6 dans un `ConfigMap` nommé `k6-scripts`.
+- Lancez les tests après le déploiement :
+  ```sh
+  helm test mon-app
+  ```
+- Récupérez les logs du pod de test pour voir les résultats :
+  ```sh
+  kubectl logs pod/k6-load-test
+  ```
+
+Cette méthode permet d’intégrer les tests de charge dans vos workflows Helm et d’automatiser leur exécution à chaque déploiement.
