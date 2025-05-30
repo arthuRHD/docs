@@ -1,1 +1,0 @@
-# LLM avec Mojo et Python
