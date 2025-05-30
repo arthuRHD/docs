@@ -21,6 +21,8 @@ Ce site regroupe des fiches techniques, des guides pratiques et des notes person
 
 ## Contribuer ou corriger
 
+Dans chaque section, vous trouverez des liens pour contribuer ou corriger les fiches. Que ce soit pour ajouter une nouvelle ressource, corriger une erreur ou proposer une amélioration, votre aide est la bienvenue.
+
 Vos retours sont précieux pour améliorer la qualité de ce référentiel. Si vous repérez une erreur, souhaitez suggérer une amélioration ou partager une ressource, n’hésitez pas à me contacter.
 
 Vous pouvez me joindre par mail : <hello@arthurrichard.fr>
