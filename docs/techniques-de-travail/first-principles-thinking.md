@@ -12,16 +12,16 @@ La pensée par premiers principes est une méthode d’analyse et de résolution
 
 **Problème :** « Le déploiement de notre application prend trop de temps. »
 
-- **Suppositions courantes :**
+**Suppositions courantes :**
   - Il faut utiliser l’outil X car tout le monde l’utilise.
   - Les builds doivent toujours passer par notre pipeline actuel.
 
-- **Décomposition en premiers principes :**
+**Décomposition en premiers principes :**
   - Objectif : livrer du code fiable rapidement.
   - Contraintes : sécurité, reproductibilité, coût.
   - Ressources : outils d’automatisation, conteneurisation, scripts personnalisés.
 
-- **Recomposition :**
+**Recomposition :**
   - Peut-on automatiser davantage ?
   - Peut-on paralléliser certaines étapes ?
   - Peut-on changer d’outil ou de méthode (ex : passer de VM à des conteneurs) ?
@@ -31,12 +31,15 @@ La pensée par premiers principes est une méthode d’analyse et de résolution
 ## Autre exemple (hors tech)
 
 **Problème :** « Les batteries de voitures électriques coûtent trop cher. »
-- **Suppositions courantes :** Les batteries sont chères car les fournisseurs le disent.
-- **Premiers principes :**
+
+**Suppositions courantes :** Les batteries sont chères car les fournisseurs le disent.
+
+**Premiers principes :**
   - De quoi est composée une batterie ?
   - Quels sont les coûts des matières premières ?
   - Peut-on fabriquer différemment ?
-- **Résultat :** Recherche de nouveaux matériaux, nouvelles méthodes de fabrication.
+
+**Résultat :** Recherche de nouveaux matériaux, nouvelles méthodes de fabrication.
 
 ## Conseils pour appliquer la pensée par premiers principes
 

@@ -29,7 +29,7 @@ nav:
       - AWS: DevOps/aws.md
       - Terraform: DevOps/terraform.md
       - Helm: DevOps/helm.md
-      - Kubernetes: DevOps/kubejob.md
+      - Job Kubernetes: DevOps/kubejob.md
       - Sécurité Kubernetes: DevOps/security-k8s.md
       - KRR: DevOps/krr.md
       - APM & ELK: DevOps/apm.md
@@ -54,3 +54,4 @@ nav:
   - Techniques de travail:
       - Matrice d'Eisenhower: techniques-de-travail/eisenhower-matrix.md
       - Premiers principes: techniques-de-travail/first-principles-thinking.md
+      - The Twelve-Factor App: techniques-de-travail/twelve-factor-app.md

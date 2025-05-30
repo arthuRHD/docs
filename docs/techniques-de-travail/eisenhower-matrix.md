@@ -11,6 +11,7 @@ Aussi, être accompagné d'un PO ou du client permet d'éviter le biais dans la 
 ## Principe de la matrice
 
 La matrice d'Eisenhower est un outil de gestion du temps qui permet de classer les tâches selon deux axes :
+
 - **Urgence** : la tâche doit-elle être traitée rapidement ?
 - **Importance** : la tâche a-t-elle un impact significatif sur les objectifs ?
 
@@ -23,22 +24,12 @@ On obtient ainsi 4 catégories :
 
 ### Détail des quadrants
 
-1. **Important & Urgent** :
-   - À traiter immédiatement. Ex : bug bloquant en production, deadline imminente.
-2. **Important & Pas urgent** :
-   - À planifier. Ex : refonte technique, veille technologique, formation.
-3. **Pas important & Urgent** :
-   - À déléguer si possible. Ex : demandes administratives, interruptions diverses.
-4. **Pas important & Pas urgent** :
-   - À éliminer ou minimiser. Ex : tâches routinières sans valeur ajoutée, distractions.
+1. **Important & Urgent** : À traiter immédiatement. Ex : bug bloquant en production, deadline imminente.
+2. **Important & Pas urgent** : À planifier. Ex : refonte technique, veille technologique, formation.
+3. **Pas important & Urgent** : À déléguer si possible. Ex : demandes administratives, interruptions diverses.
+4. **Pas important & Pas urgent** : À éliminer ou minimiser. Ex : tâches routinières sans valeur ajoutée, distractions.
 
 ## Exemple d'application
-
-Supposons que vous ayez la liste de tâches suivante :
-- Corriger un bug critique sur le site (Important & Urgent)
-- Préparer une présentation pour la semaine prochaine (Important & Pas urgent)
-- Répondre à un email administratif (Pas important & Urgent)
-- Lire les dernières news tech (Pas important & Pas urgent)
 
 | Tâche                                         | Catégorie                        |
 |-----------------------------------------------|----------------------------------|
