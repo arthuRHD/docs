@@ -32,104 +32,122 @@ export function App() {
 }
 ```
 
-## Hooks
+### Typage avancé des props
 
-### useState
-
-__useState__ permet de stocker une valeur mutable (par exemple, un input ou un fichier). Le DOM est rechargé à chaque fois que cette valeur stockée est modifiée.
+Vous pouvez typer finement les props, y compris les callbacks et les objets imbriqués :
 
 ```typescript
-import { React, useState } from 'react';
-import { CustomComponent } from './CustomComponent.jsx';
+interface ButtonProps {
+  label: string;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  style?: React.CSSProperties;
+}
 
-export function App() {
-  const [innerText, setInnerText] = useState<string>("");
+export function Button({ label, onClick, style }: ButtonProps) {
+  return <button style={style} onClick={onClick}>{label}</button>;
+}
+```
 
+## Gestion des props par défaut et children
+
+```typescript
+interface CardProps {
+  title: string;
+  children?: React.ReactNode;
+}
+
+export function Card({ title, children }: CardProps) {
   return (
-      <div>
-          <CustomComponent text={innerText}/>
-          <input value={innerHtml} onChange={e => setInnerHtml(e.target.value)}/>
-      </div>
+    <div className="card">
+      <h2>{title}</h2>
+      <div>{children}</div>
+    </div>
   );
 }
 ```
 
-### useEffect
+## Routing avec React Router
 
-__useEffect__ effectue une tâche lorsqu'une valeur stockée dans un state est altérée. Si nous passons un tableau vide en paramètre, la tâche s'effectura une seule fois au chargement du DOM.
+Pour gérer la navigation entre pages, utilisez [react-router-dom](https://reactrouter.com/):
 
+```sh
+npm install react-router-dom
+```
+
+Exemple d’utilisation :
 ```typescript
-import { React, useState, useEffect } from 'react';
-import { CustomComponent } from './CustomComponent.jsx';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 export function App() {
-
-  const [count, setCount] = useState<number>(0);
-  const [innerText, setInnerText] = useState<string>("");
-
-  useEffect(() => console.log("App component initialized"), [])
-
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/todos/' + count)
-      .then(response => response.json())
-      .then(json => setInnerText(json.title))
-  }, [count, setInnerText]);
-
-  const increment = () => setCount(count + 1)
-
   return (
-      <div>
-          <CustomComponent text={innerText}/>
-
-          <button onClick={increment}>Click hear {count}</button>
-      </div>
+    <BrowserRouter>
+      <nav>
+        <Link to="/">Accueil</Link>
+        <Link to="/about">À propos</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 ```
 
-## Gestion des appels API
+## Gestion des formulaires
 
-C'est pratique de savoir comment créer des composants graphiques, mais que fait-on si nous devons récupérer de la données depuis un serveur ? il faut être en mesure de pouvoir organiser les appels en suivant les bonnes pratiques. Cela signifie:
-
-- Ne pas stocker de clés privées ou de clés API côté client pour la sécurité.
-- Eviter de dupliquer les appels dans chaque composant, il faut les centraliser dans un DAO.
-
-### Utilisation de Redux avec Thunk
-
-Utiliser Redux nous permet découpler l'UI de la données. On utilise Thunk pour ajouter un middleware qui nous permet d'abstraire les changements de state dûs à la réponse API (loading, error, etc).
-
-### Éviter la duplication des appels lors de rafraichissement du DOM
-
-Lorsque le state est mis à jour, le DOM est rechargé et les appels API sont malheuresement réitérés. Pour cela, il faut utiliser le hook __useMemo__ qui permet de mettre en cache la réponse à cet appel.
+Pour gérer les formulaires, utilisez le state et les événements :
 
 ```typescript
-import { React, useState, useMemo, useEffect } from 'react';
-import { CustomComponent } from './CustomComponent.jsx';
+import { useState } from 'react';
 
-export function App() {
+export function ContactForm() {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const [count, setCount] = useState<number>(0);
-  const [innerText, setInnerText] = useState<string>("");
-
-  const apiCall = (index: number): string async => {
-    let response = await fetch('https://jsonplaceholder.typicode.com/todos/' + index);
-    return reponse.json().title
-  } 
-
-  const cachedData = useMemo(() => apiCall(count), [count])
-
-  useEffect(() => console.log("App component initialized"), [])
-
-  useEffect(() => setInnerText(cachedData), [cachedData, setInnerText]);
-
-  const increment = () => setCount(count + 1)
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Envoyer les données
+  };
 
   return (
-      <div>
-          <CustomComponent text={innerText}/>
-
-          <button onClick={increment}>Click hear {count}</button>
-      </div>
+    <form onSubmit={handleSubmit}>
+      <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
+      <textarea value={message} onChange={e => setMessage(e.target.value)} />
+      <button type="submit">Envoyer</button>
+    </form>
   );
 }
 ```
+
+## Tests unitaires avec React Testing Library
+
+Pour tester vos composants :
+
+```sh
+npm install --save-dev @testing-library/react @testing-library/jest-dom
+```
+
+Exemple de test :
+```typescript
+import { render, screen } from '@testing-library/react';
+import { Button } from './Button';
+
+test('affiche le label', () => {
+  render(<Button label="OK" onClick={() => {}} />);
+  expect(screen.getByText('OK')).toBeInTheDocument();
+});
+```
+
+## Bonnes pratiques
+- Structurez votre projet avec des dossiers `/components`, `/pages`, `/hooks`, `/utils`.
+- Utilisez des hooks personnalisés pour factoriser la logique réutilisable.
+- Préférez les fonctions pures et le typage strict.
+- Documentez les props et les hooks avec des commentaires JSDoc.
+- Utilisez des outils comme ESLint et Prettier pour la qualité du code.
+
+## Ressources utiles
+- [Documentation officielle React](https://fr.react.dev/)
+- [React TypeScript Cheatsheets](https://react-typescript-cheatsheet.netlify.app/)
+- [React Router](https://reactrouter.com/)
+- [Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
