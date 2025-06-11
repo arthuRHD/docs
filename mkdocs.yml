@@ -1,7 +1,7 @@
 site_name: Veille technologique
 theme:
   language: fr
-  name: terminal
+  name: bootstrap386
   features:
     - content.code.copy
     - content.code.annotate
