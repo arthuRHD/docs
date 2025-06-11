@@ -1,7 +1,7 @@
 site_name: Veille technologique
 theme:
   language: fr
-  name: material
+  name: terminal
   features:
     - content.code.copy
     - content.code.annotate
