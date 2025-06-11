@@ -1,3 +1,2 @@
 mkdocs-git-revision-date-localized-plugin
-mkdocs-bootstrap386
-mkdocs-terminal
+mkdocs-shadcn
