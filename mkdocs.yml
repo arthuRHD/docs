@@ -1,7 +1,7 @@
 site_name: Veille technologique
 theme:
   language: fr
-  name: bootstrap386
+  name: shadcn
   features:
     - content.code.copy
     - content.code.annotate
